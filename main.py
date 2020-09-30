@@ -4,11 +4,17 @@ import os
 
 from PySide2.QtGui import QGuiApplication
 from PySide2.QtQml import QQmlApplicationEngine
+from CalcEngine import CalcEngine
 
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
+    context = engine.rootContext()
+
+    clac_engine = CalcEngine()
+    context.setContextProperty("CalcEngine", clac_engine)
+
     engine.load(os.path.join(os.path.dirname(__file__), "main.qml"))
 
     if not engine.rootObjects():

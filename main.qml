@@ -14,6 +14,7 @@ Window {
         anchors.fill: parent
 
         Display{
+            id: display
             Layout.fillWidth: true
             Layout.minimumHeight: 80
             Layout.alignment: Qt.AlignTop
@@ -23,6 +24,7 @@ Window {
         ButtonPanel{
             Layout.fillHeight: true
             Layout.fillWidth: true
+
         }
 
     }

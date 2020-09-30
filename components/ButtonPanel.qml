@@ -13,7 +13,7 @@ Item {
 
         Repeater{
             model: [
-                "c", "+/-", "%", "/",
+                "C", "+/-", "%", "/",
                 "7", "8", "9", "*",
                 "4", "5", "6", "-",
                 "1", "2", "3", "+",
@@ -25,6 +25,8 @@ Item {
                 Layout.fillWidth: true
                 text: modelData
                 font.pixelSize: 30
+
+                onClicked: CalcEngine.result = modelData
             }
         }
 
